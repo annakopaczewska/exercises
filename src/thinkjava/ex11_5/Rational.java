@@ -66,8 +66,10 @@ public class Rational {
         return gcd(b, value);
     }
 
-    public Rational add(Rational rational){
-
-
+    public Rational add(Rational rational) {
+        int newCounter = this.counter * rational.denominator + rational.counter + this.denominator;
+        int newDenominator = this.denominator * rational.denominator;
+        rational.reduce();
+        return rational;
     }
 }

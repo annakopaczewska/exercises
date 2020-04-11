@@ -8,7 +8,7 @@ public class Main {
         rational.setDenominator(4);
         rational.printRational();
 
-        Rational rational2 = new Rational(rational.getCounter(),20);
+        Rational rational2 = new Rational(rational.getCounter(), 20);
         rational2.negate();
 
         rational2.invert();
@@ -17,10 +17,12 @@ public class Main {
         double doubleValue = rational2.toDouble();
         System.out.println(doubleValue);
 
-        Rational rational3 = new Rational(3,15);
+        Rational rational3 = new Rational(3, 15);
         rational3.printRational();
         rational3.reduce();
         rational3.printRational();
 
+        Rational rational4 = new Rational(5, 10);
+        rational.add(rational4).printRational();
     }
 }
