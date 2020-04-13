@@ -1,4 +1,4 @@
-package thinkjava.ex13;
+package thinkjava.ex14;
 
 public class Card {
 
@@ -11,13 +11,29 @@ public class Card {
     }
 
     public int compareTo(Card that) {
-        if (suit < that.suit) {
+        if (this.suit < that.suit){
             return -1;
         }
-        if (suit > that.suit) {
+        if (this.suit > that.suit){
             return 1;
         }
-        return Integer.compare(rank, that.rank);
+        if (this.rank < that.rank){
+            if (this.rank == 1) {
+                return 1;
+            }
+            else {
+                return -1;
+            }
+        }
+        if (this.rank > that.rank){
+            if (that.rank == 1) {
+                return -1;
+            }
+            else {
+                return 1;
+            }
+        }
+        return 0;
     }
 
     public boolean equals(Card that) {
