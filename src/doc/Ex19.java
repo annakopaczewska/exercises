@@ -6,16 +6,16 @@ public class Ex19 {
     public static void main(String[] args) {
 
         int[] array = {1, 5, 3, 4, 9, 8, 3};
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+        for (int value : array) {
+            System.out.print(value + " ");
         }
         System.out.println();
         bubbleSort(array);
 
         System.out.println("after bubble sort");
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+        for (int value : array) {
+            System.out.print(value + " ");
         }
         int number = 0;
         number = 1;
