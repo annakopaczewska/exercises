@@ -10,12 +10,10 @@ public class AverageValues {
 
     public static void average(int[] numbers) {
         double sum = 0;
-
         for (int number : numbers) {
             sum = sum + number;
         }
         double result = sum / numbers.length;
         System.out.println("average is= " + result);
     }
-
 }
