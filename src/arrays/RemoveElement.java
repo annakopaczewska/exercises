@@ -8,19 +8,18 @@ public class RemoveElement {
         int[] array = {20, 55, 18, 190};
         System.out.println("Original array= " + Arrays.toString(array));
 
-
-        int[] array1 = remove(array, 1);
-        System.out.println("Array after remove index= " + Arrays.toString(array1));
+        System.out.println("Array after remove index= " + Arrays.toString(remove(array, 1)));
     }
 
     public static int[] remove(int[] newArray, int element) {
-        int[] result = new int[newArray.length];
-        for (int i = 0; i < newArray.length -1; i++) {
-            if (i == element) {
-                continue;
+        int[] result = new int[newArray.length - 1];
+        for (int i = 0; i < newArray.length; i++) {
+            if (newArray[i] == element) {
+                for (int j = 0; j < newArray.length - 1; j++) {
+                    result[j] = newArray[j + 1];
+                }
             }
-                newArray[] = newArray[i + 1];
-            }
+        }
         return result;
     }
 }
