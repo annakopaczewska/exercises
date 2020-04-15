@@ -12,14 +12,16 @@ public class RemoveElement {
     }
 
     public static int[] remove(int[] newArray, int element) {
-        int[] result = new int[newArray.length - 1];
-        for (int i = 0; i < newArray.length; i++) {
-            if (newArray[i] == element) {
-                for (int j = 0; j < newArray.length - 1; j++) {
-                    result[j] = newArray[j + 1];
-                }
-            }
+        if (newArray == null || element < 0 || element >= newArray.length) {
+            return newArray;
         }
-        return result;
+        int[] anotherArray = new int[newArray.length - 1];
+        for (int i = 0, k = 0; i < newArray.length; i++) {
+            if (i == element) {
+                continue;
+            }
+            anotherArray[k++] = newArray[i];
+        }
+        return anotherArray;
     }
 }
