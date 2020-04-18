@@ -38,4 +38,3 @@ public class SumArray {
         return result;
     }
 }
-
