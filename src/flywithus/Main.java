@@ -40,6 +40,11 @@ public class Main {
         Airport notExistingAirport = airportService.getAirportByIata("HFY");
         System.out.println(notExistingAirport);
 
-        notExistingAirport.getIataCode();
+        System.out.println(airportService.airportsCount());
+
+        airportService.deleteAirport("STN");
+        System.out.println(airportService.airportsCount());
+
+
     }
 }

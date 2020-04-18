@@ -29,4 +29,9 @@ public class AirportService {
         System.out.println("Get all airports.");
         return new ArrayList<>(values);
     }
+
+    public void deleteAirport(String iataCode) {
+        map.remove(iataCode);
+    }
+
 }
