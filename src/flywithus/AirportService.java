@@ -17,8 +17,7 @@ public class AirportService {
     }
 
     public Airport getAirportByIata(String iata) {
-        Airport airport = map.get(iata);
-        return airport;
+        return map.get(iata);
     }
 
     public int airportsCount() {

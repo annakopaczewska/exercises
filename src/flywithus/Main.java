@@ -37,6 +37,9 @@ public class Main {
         int count = airportService.airportsCount();
         System.out.println(count);
 
+        Airport notExistingAirport = airportService.getAirportByIata("HFY");
+        System.out.println(notExistingAirport);
 
+        notExistingAirport.getIataCode();
     }
 }
