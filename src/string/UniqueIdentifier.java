@@ -1,7 +1,5 @@
 package string;
 
-import java.sql.SQLOutput;
-
 public class UniqueIdentifier {
     public static void main(String[] args) {
         String string = "Java exercises";
