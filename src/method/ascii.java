@@ -2,7 +2,7 @@ package method;
 
 import java.util.Scanner;
 
-public class ascii {
+public class Ascii {
     public static void main(String[] args) {
         System.out.println("Input value: ");
         Scanner input = new Scanner(System.in);
