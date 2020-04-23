@@ -24,8 +24,8 @@ public class CloneArray {
 
         int allSweets = sweets.size();
         System.out.println("Using index of element: ");
-        for (int i = 0; i < allSweets; i++) {
-            System.out.println(sweets.get(i));
+        for (String sweet : sweets) {
+            System.out.println(sweet);
         }
     }
 }
