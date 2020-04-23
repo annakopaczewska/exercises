@@ -9,14 +9,23 @@ public class CloneArray {
         sweets.add("oreo");
         sweets.add("kinder");
         sweets.add("pieguski");
-        System.out.println(" First array: "+ sweets);
+        System.out.println(" First array: " + sweets);
 
-        ArrayList<String> doubleSweets = (ArrayList<String>)sweets.clone();
-        System.out.println("Second array: "+doubleSweets);
+        ArrayList<String> doubleSweets = (ArrayList<String>) sweets.clone();
+        System.out.println("Second array: " + doubleSweets);
 
         System.out.println("Empty array: " + sweets);
 
         System.out.println("Check if array is empty or not" + sweets.isEmpty());
         System.out.println("Array size: " + sweets.size());
+
+        sweets.set(1, "ww");
+        System.out.println("Array with replace:" + sweets);
+
+        int allSweets = sweets.size();
+        System.out.println("Using index of element: ");
+        for (int i = 0; i < allSweets; i++) {
+            System.out.println(sweets.get(i));
+        }
     }
 }
