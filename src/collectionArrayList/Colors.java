@@ -33,5 +33,6 @@ public class Colors {
         Collections.reverse(color);
         System.out.println(color);
 
+        System.out.println(color.subList(0,4));
     }
 }
