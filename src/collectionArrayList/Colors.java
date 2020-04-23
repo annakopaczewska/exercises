@@ -12,8 +12,8 @@ public class Colors {
         color.add("Pink");
         color.add("Black");
 
-        color.add(0,"Grey");
-        color.add(3,"Yellow");
+        color.add(0, "Grey");
+        color.add(3, "Yellow");
         System.out.println(color);
 
         String element = color.get(2);
@@ -26,5 +26,12 @@ public class Colors {
 
         Collections.sort(color);
         System.out.println("List after sort: " + color);
+
+//        Collections.shuffle(color);
+//        System.out.println(color);
+
+        Collections.reverse(color);
+        System.out.println(color);
+
     }
 }
