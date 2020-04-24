@@ -14,5 +14,11 @@ public class RetrieveElement {
         System.out.println("Retrieve element: " + retrieve);
 
         System.out.println("All sweets: " +sweets);
+
+        if(sweets.contains("candy")){
+            System.out.println("Yes!");
+        } else{
+            System.out.println("No exist");
+        }
     }
 }
