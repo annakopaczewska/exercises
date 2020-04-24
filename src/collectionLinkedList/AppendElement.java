@@ -18,5 +18,13 @@ public class AppendElement {
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
+
+        System.out.println();
+
+        // reverse order
+        Iterator iterator1 = myList.descendingIterator();
+        while (iterator1.hasNext()) {
+            System.out.println(iterator1.next());
+        }
     }
 }
