@@ -10,11 +10,7 @@ public class AppendElement {
         myList.add("red");
         myList.add("white");
 
-//        for (String a : myList) {
-//            System.out.println(myList);
-//    }
         Iterator iterator = myList.listIterator(1);
-
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
