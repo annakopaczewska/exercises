@@ -15,5 +15,18 @@ public class InsertElement {
         myList.addFirst("cola");
         myList.addLast("mojito");
         System.out.println(myList);
+
+        myList.offerFirst("water");
+        System.out.println(myList);
+
+        LinkedList<String> newList = new LinkedList<String>();
+        newList.add("fanta");
+        newList.add("yerba");
+
+        myList.addAll(1,newList);
+        System.out.println(myList);
+
+        System.out.println(myList.getFirst());
+        System.out.println(myList.getLast());
     }
 }
