@@ -11,7 +11,7 @@ public class CloneArray {
         sweets.add("pieguski");
         System.out.println(" First array: " + sweets);
 
-        ArrayList<String> doubleSweets = (ArrayList<String>) sweets.clone();
+        ArrayList<String> doubleSweets = (ArrayList<String>)sweets.clone();
         System.out.println("Second array: " + doubleSweets);
 
         System.out.println("Empty array: " + sweets);
