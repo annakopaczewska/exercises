@@ -19,6 +19,7 @@ public class AppendElements {
         System.out.println(hashSet.size());
 
         hashSet.removeAll(hashSet);
+        System.out.println("Check array is empty or not: " + hashSet.isEmpty());
         System.out.println(hashSet);
     }
 }
