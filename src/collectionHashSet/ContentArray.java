@@ -20,5 +20,8 @@ public class ContentArray {
 
         hashList.retainAll(hashList2);
         System.out.println(hashList);
+
+        hashList2.clear();
+        System.out.println(hashList2);
     }
 }
