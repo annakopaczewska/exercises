@@ -13,6 +13,7 @@ public class Convert {
         hashList.add("pink");
         System.out.println(hashList);
 
+        
         List<String> newList = new ArrayList<String>(hashList);
         System.out.println("ArrayList " + newList);
     }
