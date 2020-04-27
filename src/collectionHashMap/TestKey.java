@@ -2,7 +2,7 @@ package collectionHashMap;
 
 import java.util.HashMap;
 
-public class TestContains {
+public class TestKey {
     public static void main(String[] args) {
         HashMap<String, Integer> myHashMap = new HashMap<String, Integer>();
         myHashMap.put("tea", 1);
