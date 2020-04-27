@@ -14,5 +14,6 @@ public class KeyAndValue {
         for (Map.Entry a : myHashMap.entrySet()) {
             System.out.println(a.getKey() + " " + a.getValue());
         }
+        System.out.println("Size of my hash map: " + myHashMap.size());
     }
 }
