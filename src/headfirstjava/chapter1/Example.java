@@ -1,4 +1,4 @@
-package headfirstjava;
+package headfirstjava.chapter1;
 
 public class Example {
     public static void main(String[] args) {
