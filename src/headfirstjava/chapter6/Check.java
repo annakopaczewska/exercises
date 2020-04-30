@@ -1,39 +1,27 @@
 package headfirstjava.chapter6;
 
+import java.util.ArrayList;
+
 public class Check {
-    public static void main(String[] args) {
-        EasyGame easyGame = new EasyGame();
-        int[] position = {2, 3, 4};
-        easyGame.setPositionField(position);
-        String chooseField = "2";
-        String result = easyGame.check(chooseField);
-
-    }
-
     static class EasyGame {
-        int[] positionField;
-        int numberHits;
+        private ArrayList positionField;
 
-        public void setPositionField(int[] pf) {
+        public void setPositionField(ArrayList pf) {
             positionField = pf;
         }
 
-        public String check(String stringField) {
-            int field = Integer.parseInt(stringField);
-
+        public String check(String move) {
             String result = "mishit";
+            int index = positionField.indexOf(move);
 
-            for (int value : positionField) {
-                if (field == value) {
-                    result = "Hit!";
-                    numberHits++;
-                    break;
-                }
+            if (index >= 0) {
+                positionField.remove(index);
             }
-            if (numberHits == positionField.length) {
+            if (positionField.isEmpty()) {
                 result = "sunk";
+            } else {
+                result = "hit!";
             }
-            System.out.println(result);
             return result;
         }
     }
