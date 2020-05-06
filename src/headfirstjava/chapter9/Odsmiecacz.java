@@ -18,7 +18,7 @@ public class Odsmiecacz {
 
     }
 
-    private static void toWork2(Odsmiecacz odsmiecacz) {
+    public static void toWork2(Odsmiecacz odsmiecacz) {
         Odsmiecacz localOdsmiecacz;
     }
 }
