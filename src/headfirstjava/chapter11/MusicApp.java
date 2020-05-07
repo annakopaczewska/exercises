@@ -23,8 +23,13 @@ public class MusicApp {
 
             ShortMessage b = new ShortMessage();
             b.setMessage(128, 1, 44, 100);
-            MidiEvent noteK = new MidiEvent(b, 16);
+            MidiEvent noteK = new MidiEvent(b, 8);
             track.add(noteK);
+
+            ShortMessage c = new ShortMessage();
+            c.setMessage(192, 1, 44, 100);
+            MidiEvent noteD = new MidiEvent(c, 16);
+            track.add(noteD);
 
             sequencer.setSequence(sequence);
             sequencer.start();
