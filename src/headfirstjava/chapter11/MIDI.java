@@ -5,7 +5,7 @@ import javax.sound.midi.MidiUnavailableException;
 import javax.sound.midi.Sequencer;
 
 public class MIDI {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MidiUnavailableException {
         MIDI musicTest = new MIDI();
         musicTest.play();
     }
