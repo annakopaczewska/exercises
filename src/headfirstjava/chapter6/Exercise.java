@@ -1,5 +1,7 @@
 package headfirstjava.chapter6;
 
+import com.sun.media.sound.JavaSoundAudioClip;
+
 import java.util.ArrayList;
 
 public class Exercise {
