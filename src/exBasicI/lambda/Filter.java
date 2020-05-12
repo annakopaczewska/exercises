@@ -1,4 +1,4 @@
-package exBasicI;
+package exBasicI.lambda;
 
 public interface Filter {
     boolean filter();

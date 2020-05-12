@@ -1,9 +1,7 @@
-package exBasicI;
+package exBasicI.lambda;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ConcurrentMap;
-import java.util.function.Consumer;
 
 
 public class Compare {
