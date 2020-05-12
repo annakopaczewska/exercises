@@ -3,6 +3,7 @@ package exBasicI.stream;
 import java.util.*;
 import java.util.stream.Collectors;
 
+
 public class ExampleStream {
     public static void main(String[] args) {
 
