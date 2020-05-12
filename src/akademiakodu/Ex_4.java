@@ -18,5 +18,6 @@ public class Ex_4 {
 
         double multi = number + number2;
         System.out.println("Multiplication is equals = " + multi);
+        
     }
 }
