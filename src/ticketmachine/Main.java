@@ -2,9 +2,11 @@ package ticketmachine;
 
 public class Main {
     public static void main(String[] args) {
-        TicketMachine ticketMachine = new TicketMachine();
-        ticketMachine
 
+        Order order = new Order();
+        order.addToCard(TicketType.DISCOUNT);
 
     }
 }
+
+

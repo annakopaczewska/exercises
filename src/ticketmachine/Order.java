@@ -22,18 +22,23 @@ public class Order {
 
     public void getTicketsType() {
         for (TicketType ticketType : card) {
-//            System.out.println(ticketType.getTicketType(), ticketType.getTicketPrice());
-            System.out.println(" ");
+            System.out.println("Ticket type: " + ticketType.getTicketType() + "\n" + "price: " + ticketType.getTicketPrice());
         }
     }
 
+    public void getCart() {
+        double totalPrice = 0;
+        for (TicketType ticketType : card) {
+            System.out.println();
+            totalPrice += ticketType.getTicketPrice();
+        }
+        System.out.println("To pay: " + totalPrice);
+        totalPriceToPay = totalPrice;
+    }
 
-
-
-
-
-
-
+    public int cartSize() {
+        return card.size();
+    }
 }
 
 
