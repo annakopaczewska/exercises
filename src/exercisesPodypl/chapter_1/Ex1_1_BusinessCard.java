@@ -1,4 +1,4 @@
-package exercisesPodypl;
+package exercisesPodypl.chapter_1;
 
 
 public class Ex1_1_BusinessCard {

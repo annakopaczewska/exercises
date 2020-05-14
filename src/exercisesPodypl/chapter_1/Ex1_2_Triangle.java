@@ -1,4 +1,4 @@
-package exercisesPodypl;
+package exercisesPodypl.chapter_1;
 
 public class Ex1_2_Triangle {
     public static void main(String[] args) {

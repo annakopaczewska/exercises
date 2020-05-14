@@ -1,4 +1,4 @@
-package exercisesPodypl;
+package exercisesPodypl.chapter_1;
 
         import java.util.ArrayList;
         import java.util.Arrays;

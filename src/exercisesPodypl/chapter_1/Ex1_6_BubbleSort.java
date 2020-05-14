@@ -1,4 +1,4 @@
-package exercisesPodypl;
+package exercisesPodypl.chapter_1;
 
 public class Ex1_6_BubbleSort {
     public static void main(String[] args) {
@@ -16,8 +16,8 @@ public class Ex1_6_BubbleSort {
             }
         }
 
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.print(numbers[i] + " ");
+        for (int number : numbers) {
+            System.out.print(number + " ");
         }
     }
 }

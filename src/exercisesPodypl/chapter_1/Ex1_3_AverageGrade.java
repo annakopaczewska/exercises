@@ -1,6 +1,5 @@
-package exercisesPodypl;
+package exercisesPodypl.chapter_1;
 
-import java.sql.SQLOutput;
 
 public class Ex1_3_AverageGrade {
     public static void main(String[] args) {

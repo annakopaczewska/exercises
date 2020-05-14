@@ -19,7 +19,5 @@ public class LowerCase {
 //        System.out.println(firstLetter);
 
         System.out.println(string.substring(0, string.length() / 2));
-
-
     }
 }
