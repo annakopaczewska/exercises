@@ -17,6 +17,11 @@ public class Main {
         order.getTicketsType();
 
         order.getPriceToPay();
+
+
+
+
+
     }
 }
 

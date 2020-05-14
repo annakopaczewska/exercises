@@ -34,5 +34,9 @@ public class MoneyFeeder {
     public boolean safetyNominalStock() {
         return cashAvailable.get(1.0) < 50 || cashAvailable.get(2.0) < 30 || cashAvailable.get(5.0) < 10;
     }
+
+    public void checkMoneyAvailability() {
+
+    }
 }
 
