@@ -6,11 +6,7 @@ import java.util.List;
 public class Order {
 
     private List<TicketType> card = new ArrayList<>();
-    private double totalPriceToPay;
 
-    public double getTotalPriceToPay() {
-        return totalPriceToPay;
-    }
 
     public void addToCard(TicketType ticketType) {
         card.add(ticketType);
@@ -26,17 +22,17 @@ public class Order {
         }
     }
 
-    public void getCart() {
+    public void getPriceToPay() {
         double totalPrice = 0;
         for (TicketType ticketType : card) {
             System.out.println();
             totalPrice += ticketType.getTicketPrice();
         }
         System.out.println("To pay: " + totalPrice);
-        totalPriceToPay = totalPrice;
+        double totalPriceToPay = totalPrice;
     }
 
-    public int cartSize() {
+    public int cardSize() {
         return card.size();
     }
 }
