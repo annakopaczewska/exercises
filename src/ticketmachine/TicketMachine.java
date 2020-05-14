@@ -16,6 +16,7 @@ public class TicketMachine {
     }
 
     private void menu() {
+
     }
 
 }
