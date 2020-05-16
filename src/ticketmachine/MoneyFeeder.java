@@ -21,6 +21,13 @@ public class MoneyFeeder {
         }
     }
 
+    public void giveChange(double chargeAmount) {
+        System.out.println("Wait for Your change " + chargeAmount);
+        double moneyLeftToPay = chargeAmount;
+
+        /////////////////////////////////
+    }
+
     public boolean isMachineAvailable() {
         for (Double nominalQuantity : cashAvailable.keySet()) {
             if (safetyNominalStock()) {
