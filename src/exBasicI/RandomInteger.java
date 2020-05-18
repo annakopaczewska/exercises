@@ -1,6 +1,5 @@
 package exBasicI;
 
-import java.util.Random;
 
 public class RandomInteger {
     public static void main(String[] args) {
