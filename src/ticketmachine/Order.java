@@ -21,7 +21,7 @@ public class Order {
         }
     }
 
-    public void getPriceToPay() {
+    public void getTotalPriceToPay() {
         double totalPrice = 0;
         for (TicketType ticketType : card) {
             System.out.println();

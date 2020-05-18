@@ -18,12 +18,12 @@ public class TicketMachine {
 
     private void menu() {
         int exit = 0;
+        System.out.println();
         System.out.println("Welcome to Ticket Machine!");
         while (moneyFeeder.isMachineAvailable()) {
             try {
                 System.out.println("Choose one option.");
-                order.getPriceToPay();
-
+                order.getTotalPriceToPay();
                 int whatDo = scanner.nextInt();
                 scanner.nextLine();
 
@@ -37,7 +37,7 @@ public class TicketMachine {
                         break;
 
                     case 3:
-                        pay();
+//                        pay();
 
                     case 4:
                         System.out.println("Thanks for using MJ ticket machine");
@@ -48,12 +48,9 @@ public class TicketMachine {
                 break;
             }
         }
-
+        scanner.close();
     }
 
-    private void pay() {
-
-    }
 
     private void removeTicket() {
         System.out.println("Remove ticket type from card" + TicketType.NORMAL + TicketType.DISCOUNT + TicketType.WEEK + TicketType.ALL_DAY);
@@ -77,7 +74,11 @@ public class TicketMachine {
     }
 
     private void addTicket() {
-        System.out.println("Add ticket type to card" + TicketType.NORMAL + TicketType.DISCOUNT + TicketType.WEEK + TicketType.ALL_DAY);
+        System.out.println("Add ticket type to card: "
+                + "\n 1. " + TicketType.NORMAL
+                + "\n + 2. " + TicketType.DISCOUNT
+                + "\n + 3. " + TicketType.WEEK
+                + "\n + 4. " + TicketType.ALL_DAY);
 
         int addType = scanner.nextInt();
         scanner.nextLine();
@@ -97,17 +98,27 @@ public class TicketMachine {
         }
     }
 
+//    public void pay() {
+//        double purchaseMoneyGiven = 0;
+//        double moneyLeftToPay = order.getTotalPriceToPay() - purchaseMoneyGiven;
+//
+//    }
+
     public boolean isServiceMode(boolean ON) {
         return this.serviceMode = ON;
     }
 
     public void service() {
         isServiceMode(true);
-        moneyFeeder.putMoney(10, 5);
-        moneyFeeder.putMoney(5, 5);
-        moneyFeeder.putMoney(2, 5);
-        moneyFeeder.putMoney(1, 5);
-        moneyFeeder.putMoney(0.5, 5);
+        moneyFeeder.putMoney(0.05, 100);
+        moneyFeeder.putMoney(0.10, 50);
+        moneyFeeder.putMoney(1, 100);
+        moneyFeeder.putMoney(2, 50);
+        moneyFeeder.putMoney(5, 20);
+        moneyFeeder.putMoney(10, 10);
+        moneyFeeder.putMoney(20, 10);
+        moneyFeeder.takeMoney(10, 5);
+        moneyFeeder.takeMoney(20, 5);
         printMoneyFeeder();
     }
 
