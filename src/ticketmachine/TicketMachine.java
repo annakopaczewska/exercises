@@ -23,7 +23,7 @@ public class TicketMachine {
         while (moneyFeeder.isMachineAvailable()) {
             try {
                 System.out.println("Choose one option.");
-                order.getTotalPriceToPay();
+                order.getCard();
                 int whatDo = scanner.nextInt();
                 scanner.nextLine();
 
@@ -37,7 +37,7 @@ public class TicketMachine {
                         break;
 
                     case 3:
-//                        pay();
+                        pay();
 
                     case 4:
                         System.out.println("Thanks for using MJ ticket machine");
@@ -76,9 +76,9 @@ public class TicketMachine {
     private void addTicket() {
         System.out.println("Add ticket type to card: "
                 + "\n 1. " + TicketType.NORMAL
-                + "\n + 2. " + TicketType.DISCOUNT
-                + "\n + 3. " + TicketType.WEEK
-                + "\n + 4. " + TicketType.ALL_DAY);
+                + "\n 2. " + TicketType.DISCOUNT
+                + "\n 3. " + TicketType.WEEK
+                + "\n 4. " + TicketType.ALL_DAY);
 
         int addType = scanner.nextInt();
         scanner.nextLine();
@@ -98,11 +98,27 @@ public class TicketMachine {
         }
     }
 
-//    public void pay() {
-//        double purchaseMoneyGiven = 0;
-//        double moneyLeftToPay = order.getTotalPriceToPay() - purchaseMoneyGiven;
-//
-//    }
+    public void pay() {
+        double orderGivenMoney = 0;
+        double moneyLeftToPay = order.getTotalPriceToPay() - orderGivenMoney;
+
+        while (moneyLeftToPay != 0 && moneyFeeder.isMachineAvailable()) {
+            System.out.println("");
+            System.out.println("To be paid left: " + moneyLeftToPay + "PLN");
+
+            orderGivenMoney = scanner.nextDouble();
+            scanner.nextLine();
+            if (checkNominal(orderGivenMoney)) {
+                moneyFeeder.putMoney(orderGivenMoney, 1);
+                System.out.println("");
+                moneyLeftToPay = moneyLeftToPay - orderGivenMoney;
+                printMoneyFeeder();
+            } else {
+                System.out.println("Invalid value ");
+            }
+        }
+    }
+
 
     public boolean isServiceMode(boolean ON) {
         return this.serviceMode = ON;
@@ -126,5 +142,10 @@ public class TicketMachine {
         if (serviceMode) {
             moneyFeeder.checkMoneyAvailability();
         }
+    }
+
+    private boolean checkNominal(double orderGivenMoney) {
+        return orderGivenMoney == 0.05 || orderGivenMoney == 0.10 || orderGivenMoney == 0.20 || orderGivenMoney == 0.50 ||
+                orderGivenMoney == 1 || orderGivenMoney == 2 || orderGivenMoney == 5 || orderGivenMoney == 10 || orderGivenMoney == 20;
     }
 }

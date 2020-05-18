@@ -58,8 +58,7 @@ public class MoneyFeeder {
         for (Double e : cashAvailable.keySet()) {
             totalMoney = cashAvailable.get(e) * e + totalMoney;
         }
-        String currency = "PLN";
-        System.out.format("Total: " + totalMoney);
+        System.out.format("Total: " + totalMoney + " PLN");
     }
 }
 
