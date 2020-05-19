@@ -8,8 +8,7 @@ public class LongestCommon {
 
     public static String findLongestCommon(String string1, String string2) {
         String result = "";
-        for (int length = string1.length();
-             length > 0; length--) {
+        for (int length = string1.length(); length > 0; length--) {
             int startIndex = 0;
             while (startIndex + length <= string1.length()) {
                 String current = string1.substring(startIndex, startIndex + length);
