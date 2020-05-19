@@ -17,10 +17,15 @@ public class Main {
 //        order.getTicketsType();
 //
 //        order.getTotalPriceToPay();
+//
+//        TicketMachine ticketMachine = new TicketMachine();
+//        ticketMachine.service();
+//        ticketMachine.takeTicket();
 
-        TicketMachine ticketMachine = new TicketMachine();
-        ticketMachine.service();
-        ticketMachine.takeTicket();
+        MoneyFeeder moneyFeeder = new MoneyFeeder();
+        moneyFeeder.putMoney(10,3);
+
+        moneyFeeder.giveChange(6);
     }
 }
 

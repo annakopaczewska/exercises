@@ -51,7 +51,6 @@ public class TicketMachine {
         scanner.close();
     }
 
-
     private void removeTicket() {
         System.out.println("Remove ticket type from card" + TicketType.NORMAL + TicketType.DISCOUNT + TicketType.WEEK + TicketType.ALL_DAY);
 

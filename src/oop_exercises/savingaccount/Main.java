@@ -7,7 +7,7 @@ public class Main {
 
         savingAccount.setSavingBalance(20000);
         savingAccount2.setSavingBalance(35000);
-        
+
         SavingAccount.modifyInterestRate(0.04);
         savingAccount.calculateMonthlyInterest();
         savingAccount2.calculateMonthlyInterest();
