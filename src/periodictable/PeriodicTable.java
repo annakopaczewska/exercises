@@ -14,9 +14,10 @@ public class PeriodicTable {
                 new ChemicalElement("potassium", "K", 19, 0.82));
     }
 
-    public void getAllElements() {
+    public List<ChemicalElement> getAllElements(List<ChemicalElement> elem) {
         for (ChemicalElement chemicalElement : elem) {
             System.out.println("All elements: " + chemicalElement);
         }
+        return elem;
     }
 }

@@ -1,7 +1,6 @@
 package periodictable;
 
 public class Main {
-
     public static void main(String[] args) {
 
         ElementType elementType = new ElementType(13);
@@ -14,6 +13,7 @@ public class Main {
         ChemicalElement chemicalElement = new ChemicalElement();
 
         PeriodicTable periodicTable = new PeriodicTable();
-        periodicTable.getAllElements();
+
+
     }
 }
