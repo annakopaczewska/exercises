@@ -11,9 +11,7 @@ public class Main {
         System.out.println(elementType3.isTransitionMetal());
 
         ChemicalElement chemicalElement = new ChemicalElement();
-
         PeriodicTable periodicTable = new PeriodicTable();
-
-
+        
     }
 }
