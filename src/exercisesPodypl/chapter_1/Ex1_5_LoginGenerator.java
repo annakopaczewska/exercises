@@ -1,7 +1,6 @@
 package exercisesPodypl.chapter_1;
 
         import java.util.ArrayList;
-        import java.util.Arrays;
         import java.util.List;
 
 public class Ex1_5_LoginGenerator {
