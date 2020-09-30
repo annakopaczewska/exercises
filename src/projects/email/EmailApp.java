@@ -3,12 +3,12 @@ package projects.email;
 import java.util.Scanner;
 
 public class EmailApp {
-    private  String firstName;
-    private  String lastName;
+    private final String firstName;
+    private final String lastName;
     private String password;
-    private int defaultPasswordLenght = 6;
-    private String email;
-    private  String department;
+    private final int defaultPasswordLenght = 6;
+    private final String email;
+    private final String department;
     private int capacityMailBox = 1000;
     private String otherEmail;
     private String company = "company.com";
@@ -24,7 +24,7 @@ public class EmailApp {
         this.password = randomPassword(defaultPasswordLenght);
         System.out.println("Your random password is: " + this.password);
 
-        email = firstName.toLowerCase()+ "." + lastName.toLowerCase() + "@" + department + "."+ company;
+        email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + "." + company;
         System.out.println("Your email is: " + email);
 
     }
@@ -52,5 +52,35 @@ public class EmailApp {
             password[i] = passwordSet.charAt(random);
         }
         return new String(password);
+    }
+
+    public void setCapacityMailBox(int capacity) {
+        this.capacityMailBox = capacity;
+    }
+
+    public void setOtherEmail(String otherEmail) {
+        this.otherEmail = otherEmail;
+    }
+
+    public void changePassword(String password) {
+        this.password = password;
+    }
+
+    public int getCapacityMailBox() {
+        return capacityMailBox;
+    }
+
+    public String getOtherEmail() {
+        return otherEmail;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String showInformation() {
+        return "Display name: " + firstName + " " + lastName +
+                "\nComplany email: " + email +
+                "\nMail capacity: " + capacityMailBox + "MB";
     }
 }
