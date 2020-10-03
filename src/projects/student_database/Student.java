@@ -4,11 +4,11 @@ import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Student {
-    private String name;
-    private String lastName;
-    private int gradeYear;
+    private final String name;
+    private final String lastName;
+    private final int gradeYear;
     private String studentID;
-    private String courses = null;
+    private String courses = "";
     private int balance = 0;
     private final int costOfCourse = 500;
     private static int ID = 99;
@@ -38,17 +38,34 @@ public class Student {
             Scanner scanner = new Scanner(System.in);
             String course = scanner.nextLine();
             if (!course.equals("E")) {
-                courses = courses + "\n" + course;
+                courses = courses + "\n " + course;
                 balance = +costOfCourse;
             } else {
-                System.out.println("Break!");
                 break;
             }
         }
         while (1 != 0);
-        System.out.println("Sign up in: " + courses);
-        System.out.println("Balance: " + balance);
     }
 
+    public void viewBalance() {
+        System.out.println("Your balance is: " + balance + " PLN");
+    }
 
+    public void payAdvance() {
+        viewBalance();
+        System.out.println("Enter your payment: ");
+        Scanner scanner = new Scanner(System.in);
+        int payment = scanner.nextInt();
+        balance -= payment;
+        System.out.println("Thanks for your payment PLN" + payment);
+        viewBalance();
+    }
+
+    public String toString() {
+        return "Name: " + name + " " + lastName
+                + "\nGrade lvl: " + gradeYear
+                + "\nStudent ID: " + studentID
+                + "\nCourses Enrolled: " + courses
+                + "\nBalance: PLN" + balance;
+    }
 }
