@@ -6,7 +6,7 @@ public class Account {
 
     private String name;
     private double balance;
-    private String UUID;
+    private final String UUID;
     private User owner;
     private ArrayList<Transaction> transactions;
 

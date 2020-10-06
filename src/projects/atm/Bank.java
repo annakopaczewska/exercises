@@ -8,6 +8,12 @@ public class Bank {
     private ArrayList<User> users;
     private ArrayList<Account> accounts;
 
+    public Bank(String name){
+        this.name = name;
+        this.users = new ArrayList<User>();
+        this.accounts = new ArrayList<Account>();
+    }
+
     public String getNewUserUUID() {
         StringBuilder UUID;
         Random random = new Random();
@@ -67,12 +73,11 @@ public class Bank {
 
     public User userLogin(String userID, String pin) {
         for (User u : this.users) {
-            if (u.getUUID().compareTo(userID) == 0) &&u.validatePin(pin) {
+            if (u.getUUID().compareTo(userID) == 0 && u.validatePin(pin)) {
                 return u;
             }
         }
         // jak nie znajdzie użytkownika lub będzie błędny pin
         return null;
-
     }
 }
